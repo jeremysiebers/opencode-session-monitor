@@ -136,9 +136,9 @@ string. A team with zero matching sessions is legitimate; it stays empty rather
 than showing a fake card.
 
 **Port already in use**
-`OSError: [Errno 98] Address already in use` means another process owns the
-port. Either stop it or run with a different `--port`. Do not run two monitors against
-the same state file.
+`SERVER ERROR: [Errno 98] Address already in use` (exit code 1) means another
+process owns the port. Either stop it or run with a different `--port`. Do not
+run two monitors against the same state file.
 
 **Only the Windows team is missing**
 That source is optional. Check that the `/mnt/c/...` path exists from WSL2, that

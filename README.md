@@ -69,7 +69,13 @@ git-ignored: configuration is per machine, not part of the project.
    OpenCode reports for a session (`session.list` / `session.get`
    `location.directory`), not a symlinked or relative variant.
 3. Copy the example config, edit the five Linux team entries (delete or edit
-   them as you like), and run `./ocmon`.
+   them as you like), and run `./ocmon`. The example also contains an optional
+   Windows source; delete that `sources[]` object if you do not run OpenCode
+   natively on Windows. With the unedited placeholders
+   (`/home/you/.local/bin/opencode` and
+   `/mnt/c/REPLACE_WITH_PATH_TO/opencode.exe`) the monitor starts but discovers
+   no sessions, so every team shows UNKNOWN until the paths and binary are
+   edited.
 4. Open the dashboard. The first poll builds a baseline: a session that already
    had an answer before the monitor started is IDLE until the next new answer.
 

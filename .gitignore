@@ -9,6 +9,13 @@ __pycache__/
 *.pyc
 .venv/
 
+# Tool caches and IDE metadata
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+*.egg-info/
+
 # Optional metrics output
 *.jsonl
 
