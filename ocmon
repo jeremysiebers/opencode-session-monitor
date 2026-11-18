@@ -1,0 +1,8 @@
+#!/bin/sh
+# Launch OpenCode Session Monitor from this checkout.
+# All arguments are forwarded to `python3 -m monitor`.
+set -eu
+
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cd "$DIR"
+exec python3 -m monitor "$@"

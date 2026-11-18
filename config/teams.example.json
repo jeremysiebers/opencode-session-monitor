@@ -1,0 +1,113 @@
+{
+  "schema": 2,
+
+  "_comment_1": "Copy this file to config/teams.json and edit the paths for your machine. Every value here is an example, not a detected fact; nothing is guessed for you.",
+  "_comment_2": "ABSOLUTE path to the OpenCode CLI. Used only when 'sources' is absent or empty (single-source mode).",
+  "opencode_bin": "/home/you/.local/bin/opencode",
+
+  "_comment_3": "Optional OpenCode service URL, e.g. http://127.0.0.1:4096. An empty string lets the CLI use its own background service and its own auth.",
+  "server_url": "",
+
+  "_comment_4": "Seconds: how often to poll, and when a card counts as stale.",
+  "poll_interval_seconds": 3,
+  "stale_threshold_seconds": 15,
+
+  "_comment_5": "Dashboard listener. Loopback by default; a non-loopback bind also requires --allow-external-bind.",
+  "bind": "127.0.0.1",
+  "port": 8765,
+
+  "_comment_6": "Exact session ids to hide from the dashboard - never titles, agent names or substrings. Leave empty unless you really want to exclude a specific session.",
+  "deny_session_ids": [],
+
+  "_comment_7": "sources[] REPLACES the single implicit source above: one entry per OpenCode installation (for example one per WSL2 distribution, plus optionally the native Windows CLI reached through interop). Each source polls independently, so a failing source only marks its own cards UNKNOWN.",
+  "sources": [
+    {
+      "key": "wsl2",
+      "opencode_bin": "/home/you/.local/bin/opencode",
+      "server_url": "",
+      "deny_session_ids": [],
+      "teams": [
+        {
+          "key": "team-alpha",
+          "label": "Team Alpha",
+          "worktree_dir": "/home/you/projects/team-alpha",
+          "session_id": null
+        },
+        {
+          "key": "team-beta",
+          "label": "Team Beta",
+          "worktree_dir": "/home/you/projects/team-beta",
+          "session_id": null
+        },
+        {
+          "key": "team-gamma",
+          "label": "Team Gamma",
+          "worktree_dir": "/home/you/projects/team-gamma",
+          "session_id": null
+        },
+        {
+          "key": "team-delta",
+          "label": "Team Delta",
+          "worktree_dir": "/home/you/projects/team-delta",
+          "session_id": null
+        },
+        {
+          "key": "team-epsilon",
+          "label": "Team Epsilon",
+          "worktree_dir": "/home/you/projects/team-epsilon",
+          "session_id": null
+        }
+      ]
+    },
+    {
+      "_comment_optional": "OPTIONAL: delete this whole object if you do not run OpenCode natively on Windows. WSL2 interop invokes the Windows executable directly; no Windows service, listener or extra port is created.",
+      "key": "win-windows",
+      "_comment_exe": "Replace with the /mnt/c/... interop path of your Windows opencode.exe.",
+      "opencode_bin": "/mnt/c/REPLACE_WITH_PATH_TO/opencode.exe",
+      "server_url": "",
+      "deny_session_ids": [],
+      "teams": [
+        {
+          "key": "team-windows",
+          "label": "Team Windows",
+          "worktree_dir": "C:\\Users\\you\\projects\\team-windows",
+          "session_id": null
+        }
+      ]
+    }
+  ],
+
+  "_comment_8": "Team groups used when 'sources' is empty (single-source back-compat); the same five groups are also exposed as cfg.teams. Leave session_id null to DISCOVER every primary session whose worktree matches worktree_dir exactly - several primaries in one worktree become stacked cards. Pin an exact ses_* id only as a migration/compat anchor. Optional child_session_ids pins known advisory child sessions.",
+  "teams": [
+    {
+      "key": "team-alpha",
+      "label": "Team Alpha",
+      "worktree_dir": "/home/you/projects/team-alpha",
+      "session_id": null
+    },
+    {
+      "key": "team-beta",
+      "label": "Team Beta",
+      "worktree_dir": "/home/you/projects/team-beta",
+      "session_id": null
+    },
+    {
+      "key": "team-gamma",
+      "label": "Team Gamma",
+      "worktree_dir": "/home/you/projects/team-gamma",
+      "session_id": null
+    },
+    {
+      "key": "team-delta",
+      "label": "Team Delta",
+      "worktree_dir": "/home/you/projects/team-delta",
+      "session_id": null
+    },
+    {
+      "key": "team-epsilon",
+      "label": "Team Epsilon",
+      "worktree_dir": "/home/you/projects/team-epsilon",
+      "session_id": null
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" role="img" aria-labelledby="title desc">
+  <title id="title">OpenCode Session Monitor dashboard</title>
+  <desc id="desc">Synthetic mock-up of the dashboard: six team containers, status badges, a READY session card with a Gezien button, and a neutral status banner.</desc>
+
+  <rect x="0" y="0" width="1180" height="820" fill="#f5f6f8"/>
+
+  <text x="32" y="52" font-family="sans-serif" font-size="26" font-weight="bold" fill="#222">OpenCode Session Monitor</text>
+  <text x="32" y="76" font-family="sans-serif" font-size="12.5" fill="#555">Read-only, local, loopback-only. Monitoring never writes to a session.</text>
+
+  <!-- neutral banner: data condition, not a transport failure -->
+  <rect x="32" y="96" width="1116" height="38" rx="6" fill="#eef2f7" stroke="#8a8a8a"/>
+  <text x="48" y="120" font-family="sans-serif" font-size="12" fill="#444">Status unavailable for 1 session (UNKNOWN). No status is fabricated.</text>
+
+  <text x="32" y="166" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222">Awaiting operator: 3</text>
+
+  <!-- ===================== Team Alpha ===================== -->
+  <rect x="32" y="190" width="360" height="275" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="48" y="218" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">Team Alpha</text>
+  <text x="376" y="218" text-anchor="end" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1f9d55">READY</text>
+  <rect x="48" y="228" width="74" height="16" rx="8" fill="#e8f0fa" stroke="#bcd3ec"/>
+  <text x="85" y="240" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#2c5a8a">source: wsl2</text>
+  <text x="132" y="240" font-family="sans-serif" font-size="10.5" fill="#666">sessions: 3</text>
+  <rect x="48" y="252" width="60" height="16" rx="8" fill="#e3f6ea" stroke="#1f9d55"/>
+  <text x="78" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#156b3b">READY 1</text>
+  <rect x="112" y="252" width="56" height="16" rx="8" fill="#fdf1de" stroke="#e08b16"/>
+  <text x="140" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#8a5300">BUSY 0</text>
+  <rect x="172" y="252" width="78" height="16" rx="8" fill="#eee" stroke="#8a8a8a"/>
+  <text x="211" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#555">UNKNOWN 2</text>
+  <rect x="254" y="252" width="66" height="16" rx="8" fill="#fff4d6" stroke="#b8860b"/>
+  <text x="287" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#6b4a00">actie 2</text>
+
+  <rect x="48" y="276" width="328" height="130" rx="8" fill="#fff" stroke="#ddd"/>
+  <rect x="48" y="276" width="328" height="5" rx="2" fill="#1f9d55"/>
+  <text x="60" y="296" font-family="sans-serif" font-size="9.5" fill="#888">Session: ses_examplemain000000000001</text>
+  <text x="60" y="322" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1f9d55">READY</text>
+  <text x="60" y="338" font-family="sans-serif" font-size="10.5" fill="#444">new completed answer</text>
+  <text x="60" y="354" font-family="sans-serif" font-size="9.5" fill="#444">Last activity: 14:02:11</text>
+  <rect x="272" y="366" width="92" height="24" rx="4" fill="#f2f2f2" stroke="#999"/>
+  <text x="318" y="382" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#222">Gezien</text>
+
+  <text x="48" y="428" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplealpha000000000002</text>
+  <text x="376" y="428" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8a8a8a">UNKNOWN</text>
+  <text x="48" y="446" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplealpha000000000003</text>
+  <text x="376" y="446" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8a8a8a">UNKNOWN</text>
+
+  <!-- ===================== Team Beta ===================== -->
+  <rect x="410" y="190" width="360" height="275" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="426" y="218" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">Team Beta</text>
+  <text x="754" y="218" text-anchor="end" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e08b16">BUSY</text>
+  <rect x="426" y="228" width="74" height="16" rx="8" fill="#e8f0fa" stroke="#bcd3ec"/>
+  <text x="463" y="240" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#2c5a8a">source: wsl2</text>
+  <text x="510" y="240" font-family="sans-serif" font-size="10.5" fill="#666">sessions: 2</text>
+  <rect x="426" y="252" width="60" height="16" rx="8" fill="#e3f6ea" stroke="#1f9d55"/>
+  <text x="456" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#156b3b">READY 0</text>
+  <rect x="490" y="252" width="56" height="16" rx="8" fill="#fdf1de" stroke="#e08b16"/>
+  <text x="518" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#8a5300">BUSY 1</text>
+  <rect x="550" y="252" width="78" height="16" rx="8" fill="#eee" stroke="#8a8a8a"/>
+  <text x="589" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#555">UNKNOWN 0</text>
+  <rect x="632" y="252" width="66" height="16" rx="8" fill="#fff4d6" stroke="#b8860b"/>
+  <text x="665" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#6b4a00">actie 0</text>
+  <text x="426" y="296" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplebeta000000000001</text>
+  <text x="754" y="296" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#e08b16">BUSY</text>
+  <text x="426" y="318" font-family="sans-serif" font-size="10.5" fill="#444">session active</text>
+  <text x="426" y="346" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplebeta000000000002</text>
+  <text x="754" y="346" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#5b7a99">IDLE</text>
+
+  <!-- ===================== Team Gamma ===================== -->
+  <rect x="788" y="190" width="360" height="275" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="804" y="218" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">Team Gamma</text>
+  <text x="1132" y="218" text-anchor="end" font-family="sans-serif" font-size="13" font-weight="bold" fill="#b23a9b">WAITING_PERMISSION</text>
+  <rect x="804" y="228" width="74" height="16" rx="8" fill="#e8f0fa" stroke="#bcd3ec"/>
+  <text x="841" y="240" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#2c5a8a">source: wsl2</text>
+  <text x="888" y="240" font-family="sans-serif" font-size="10.5" fill="#666">sessions: 1</text>
+  <rect x="804" y="252" width="60" height="16" rx="8" fill="#e3f6ea" stroke="#1f9d55"/>
+  <text x="834" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#156b3b">READY 0</text>
+  <rect x="868" y="252" width="56" height="16" rx="8" fill="#fdf1de" stroke="#e08b16"/>
+  <text x="896" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#8a5300">BUSY 0</text>
+  <rect x="928" y="252" width="78" height="16" rx="8" fill="#eee" stroke="#8a8a8a"/>
+  <text x="967" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#555">UNKNOWN 0</text>
+  <rect x="1010" y="252" width="66" height="16" rx="8" fill="#fff4d6" stroke="#b8860b"/>
+  <text x="1043" y="264" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#6b4a00">actie 1</text>
+  <text x="804" y="296" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplegamma00000000001</text>
+  <text x="1132" y="296" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#b23a9b">WAITING_PERMISSION</text>
+  <text x="804" y="314" font-family="sans-serif" font-size="10.5" fill="#444">permission request pending</text>
+  <text x="804" y="334" font-family="sans-serif" font-size="9.5" fill="#6b4a00">Gezien does not apply to a permission request.</text>
+
+  <!-- ===================== Team Delta ===================== -->
+  <rect x="32" y="485" width="360" height="275" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="48" y="513" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">Team Delta</text>
+  <text x="376" y="513" text-anchor="end" font-family="sans-serif" font-size="13" font-weight="bold" fill="#5b7a99">IDLE</text>
+  <rect x="48" y="523" width="74" height="16" rx="8" fill="#e8f0fa" stroke="#bcd3ec"/>
+  <text x="85" y="535" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#2c5a8a">source: wsl2</text>
+  <text x="132" y="535" font-family="sans-serif" font-size="10.5" fill="#666">sessions: 4</text>
+  <rect x="48" y="547" width="60" height="16" rx="8" fill="#e3f6ea" stroke="#1f9d55"/>
+  <text x="78" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#156b3b">READY 0</text>
+  <rect x="112" y="547" width="56" height="16" rx="8" fill="#fdf1de" stroke="#e08b16"/>
+  <text x="140" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#8a5300">BUSY 0</text>
+  <rect x="172" y="547" width="78" height="16" rx="8" fill="#eee" stroke="#8a8a8a"/>
+  <text x="211" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#555">UNKNOWN 0</text>
+  <rect x="254" y="547" width="66" height="16" rx="8" fill="#fff4d6" stroke="#b8860b"/>
+  <text x="287" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#6b4a00">actie 0</text>
+  <text x="48" y="591" font-family="sans-serif" font-size="9.5" fill="#888">ses_exampledelta00000000001</text>
+  <text x="376" y="591" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#5b7a99">IDLE</text>
+  <text x="48" y="613" font-family="sans-serif" font-size="9.5" fill="#888">ses_exampledelta00000000002</text>
+  <text x="376" y="613" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#5b7a99">IDLE</text>
+  <text x="48" y="635" font-family="sans-serif" font-size="9.5" fill="#888">ses_exampledelta00000000003</text>
+  <text x="376" y="635" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#5b7a99">IDLE</text>
+  <text x="48" y="657" font-family="sans-serif" font-size="9.5" fill="#888">ses_exampledelta00000000004</text>
+  <text x="376" y="657" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#5b7a99">IDLE</text>
+
+  <!-- ===================== Team Epsilon ===================== -->
+  <rect x="410" y="485" width="360" height="275" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="426" y="513" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">Team Epsilon</text>
+  <text x="754" y="513" text-anchor="end" font-family="sans-serif" font-size="13" font-weight="bold" fill="#8a8a8a">UNKNOWN</text>
+  <rect x="426" y="523" width="74" height="16" rx="8" fill="#e8f0fa" stroke="#bcd3ec"/>
+  <text x="463" y="535" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#2c5a8a">source: wsl2</text>
+  <text x="510" y="535" font-family="sans-serif" font-size="10.5" fill="#666">sessions: 0</text>
+  <rect x="426" y="547" width="60" height="16" rx="8" fill="#e3f6ea" stroke="#1f9d55"/>
+  <text x="456" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#156b3b">READY 0</text>
+  <rect x="490" y="547" width="56" height="16" rx="8" fill="#fdf1de" stroke="#e08b16"/>
+  <text x="518" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#8a5300">BUSY 0</text>
+  <rect x="550" y="547" width="78" height="16" rx="8" fill="#eee" stroke="#8a8a8a"/>
+  <text x="589" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#555">UNKNOWN 0</text>
+  <rect x="632" y="547" width="66" height="16" rx="8" fill="#fff4d6" stroke="#b8860b"/>
+  <text x="665" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#6b4a00">actie 0</text>
+  <text x="426" y="593" font-family="sans-serif" font-size="10.5" fill="#888">No sessions matched this worktree.</text>
+
+  <!-- ===================== Team Windows ===================== -->
+  <rect x="788" y="485" width="360" height="275" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="804" y="513" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222">Team Windows</text>
+  <text x="1132" y="513" text-anchor="end" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e08b16">BUSY</text>
+  <rect x="804" y="523" width="96" height="16" rx="8" fill="#e8f0fa" stroke="#bcd3ec"/>
+  <text x="852" y="535" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#2c5a8a">source: win-windows</text>
+  <text x="912" y="535" font-family="sans-serif" font-size="10.5" fill="#666">sessions: 5</text>
+  <rect x="804" y="547" width="60" height="16" rx="8" fill="#e3f6ea" stroke="#1f9d55"/>
+  <text x="834" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#156b3b">READY 0</text>
+  <rect x="868" y="547" width="56" height="16" rx="8" fill="#fdf1de" stroke="#e08b16"/>
+  <text x="896" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#8a5300">BUSY 1</text>
+  <rect x="928" y="547" width="78" height="16" rx="8" fill="#eee" stroke="#8a8a8a"/>
+  <text x="967" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#555">UNKNOWN 0</text>
+  <rect x="1010" y="547" width="66" height="16" rx="8" fill="#fff4d6" stroke="#b8860b"/>
+  <text x="1043" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#6b4a00">actie 0</text>
+  <text x="804" y="591" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplewindows000000001</text>
+  <text x="1132" y="591" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#e08b16">BUSY</text>
+  <text x="804" y="613" font-family="sans-serif" font-size="10.5" fill="#444">session active</text>
+  <text x="804" y="641" font-family="sans-serif" font-size="9.5" fill="#888">ses_examplewindows000000002</text>
+  <text x="1132" y="641" text-anchor="end" font-family="sans-serif" font-size="10" font-weight="bold" fill="#5b7a99">IDLE</text>
+
+  <text x="32" y="792" font-family="sans-serif" font-size="11" fill="#777">Synthetic mock-up for documentation: no real sessions, ids, machines or paths.</text>
+</svg>

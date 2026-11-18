@@ -1,0 +1,19 @@
+# Local, machine-specific configuration
+config/teams.json
+
+# Runtime state (the only thing the monitor writes)
+.runtime/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Optional metrics output
+*.jsonl
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
