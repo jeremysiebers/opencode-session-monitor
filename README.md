@@ -49,7 +49,7 @@ and never writes to a session.
 ## Install
 
 ```sh
-git clone <your-repository-url> opencode-session-monitor
+git clone https://github.com/jeremysiebers/opencode-session-monitor.git opencode-session-monitor
 cd opencode-session-monitor
 cp config/teams.example.json config/teams.json
 $EDITOR config/teams.json        # set opencode_bin and your worktree paths
@@ -107,7 +107,16 @@ network, no service and no real binary is needed.
 python3 -m unittest discover -s tests -v
 ```
 
-204 tests, expected `OK`.
+218 tests, expected `OK`.
+
+## Versioning (SemVer)
+
+The project follows [Semantic Versioning](https://semver.org/):
+`MAJOR.MINOR.PATCH`, with breaking changes only in a major release. The
+version has a single source, `monitor/version.py`. It is reported by
+`./ocmon --version` (`OpenCode Session Monitor 1.0.0`), shown next to the
+title in the dashboard header and exposed as the top-level `version` key of
+`/status.json`. Release notes live in [CHANGELOG.md](CHANGELOG.md).
 
 ## Security summary
 

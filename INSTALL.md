@@ -22,7 +22,7 @@ command -v opencode
 ## Linux
 
 ```sh
-git clone <your-repository-url> opencode-session-monitor
+git clone https://github.com/jeremysiebers/opencode-session-monitor.git opencode-session-monitor
 cd opencode-session-monitor
 
 cp config/teams.example.json config/teams.json
@@ -109,7 +109,7 @@ monitor's own runtime behaviour. Stop it with
 ./ocmon &                                   # or the systemd unit
 curl -fsS http://127.0.0.1:8765/status.json | python3 -m json.tool | head
 curl -fsS http://127.0.0.1:8765/ >/dev/null && echo "dashboard OK"
-python3 -m unittest discover -s tests -v    # 204 tests, fully offline
+python3 -m unittest discover -s tests -v    # 218 tests, fully offline
 ```
 
 In `status.json`, check that `teams[].source_key` matches your configured

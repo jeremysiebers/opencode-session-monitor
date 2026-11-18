@@ -393,7 +393,8 @@ class TestSessionSort(unittest.TestCase):
         )
         self.assertEqual(
             set(payload),
-            {"teams", "awaiting_count", "sessions", "banners", "metrics"},
+            # INC027l: additive top-level "version"; all prior keys kept.
+            {"teams", "awaiting_count", "sessions", "banners", "metrics", "version"},
         )
         self.assertEqual(
             set(payload["sessions"][0]),

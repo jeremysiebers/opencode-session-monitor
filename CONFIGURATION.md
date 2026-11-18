@@ -24,7 +24,11 @@ Both are accepted; the loader reports the schema it read.
 
 A schema-2 file with an empty `sources[]` behaves exactly like schema 1: one
 implicit source built from the top-level fields, namespaced by the top-level
-`source_key` (default `"default"`).
+`source_key` (default `"default"`). A non-empty `sources[]` replaces only the
+runtime source list: schema 2 still **requires** a top-level `opencode_bin`
+and a non-empty top-level `teams[]`, and both are validated. A config with
+`sources[]` but without those top-level fields is rejected with a config
+error.
 
 ## Top-level keys
 

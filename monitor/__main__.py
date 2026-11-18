@@ -12,6 +12,7 @@ from .collector import Monitor, MultiSourceMonitor, SnapshotRegistry
 from .config import ConfigError, load_config
 from .metrics import JsonlMetricsWriter, MetricsRecorder
 from .state import ReadyPending, StateStore
+from .version import __version__
 from .web import RefusedBind, is_loopback, serve
 
 # The monitor directory (parent of this package). Runtime state lives only here.
@@ -23,6 +24,11 @@ DEFAULT_TIMEOUT = 15.0
 
 def build_parser():
     parser = argparse.ArgumentParser(description="Read-only local OpenCode Session Monitor")
+    parser.add_argument(
+        "--version",
+        action="version",
+        version="OpenCode Session Monitor %s" % __version__,
+    )
     parser.add_argument("--config", default=DEFAULT_CONFIG_PATH, help="user config JSON path")
     parser.add_argument("--state", default=DEFAULT_STATE_PATH, help="monitor-local state file path")
     parser.add_argument("--bind", default=None, help="bind host (default 127.0.0.1 or config)")

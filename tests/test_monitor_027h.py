@@ -295,7 +295,9 @@ class TestStatusJsonUnchanged(unittest.TestCase):
             '"status": "READY", "reason": "", "title": "", '
             '"last_activity": "\\u2014", "awaiting": true, "summary": "hi", '
             '"membership": "PRESENT", "grace_count": 0, "age_seconds": 5.0, '
-            '"stale": false}], "banners": [], "metrics": {}}'
+            '"stale": false}], "banners": [], "metrics": {}, '
+            # INC027l: additive top-level version indicator.
+            '"version": "1.0.0"}'
         )
         self.assertEqual(json.dumps(payload), expected)
         # Rendering the dashboard must not mutate the JSON view or its output.

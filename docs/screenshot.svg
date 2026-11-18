@@ -6,6 +6,7 @@
   <rect x="0" y="0" width="1180" height="820" fill="#f5f6f8"/>
 
   <text x="32" y="52" font-family="sans-serif" font-size="26" font-weight="bold" fill="#222">OpenCode Session Monitor</text>
+  <text x="1148" y="52" text-anchor="end" font-family="sans-serif" font-size="13" fill="#555">v1.0.0</text>
   <text x="32" y="76" font-family="sans-serif" font-size="12.5" fill="#555">Read-only, local, loopback-only. Monitoring never writes to a session.</text>
 
   <!-- neutral banner: data condition, not a transport failure -->

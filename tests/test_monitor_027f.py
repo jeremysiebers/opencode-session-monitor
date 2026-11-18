@@ -1141,7 +1141,7 @@ class T13NoNewSurface(unittest.TestCase):
         parser = build_parser()
         options = {opt for action in parser._actions for opt in action.option_strings}
         self.assertEqual(options, {
-            "-h", "--help", "--config", "--state", "--bind", "--port",
+            "-h", "--help", "--version", "--config", "--state", "--bind", "--port",
             "--timeout", "--metrics-jsonl", "--allow-external-bind",
         })
         with mock.patch("sys.stderr", new=io.StringIO()):

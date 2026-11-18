@@ -20,6 +20,7 @@ from .collector import (
     BUSY, ERROR, READY, UNKNOWN, WAITING_PERMISSION, effective_status,
     status_rank,
 )
+from .version import __version__
 
 STATUS_COLOURS = {
     "BUSY": "#e08b16",
@@ -168,6 +169,9 @@ def status_json(monitor, stale_threshold, now=None):
         "sessions": sessions,
         "banners": [reason for _key, _label, reason in view.incomplete_teams],
         "metrics": _metrics_block(monitor),
+        # Additive (INC027l): read-only version indicator; existing keys and
+        # their order above are unchanged.
+        "version": __version__,
     }
 
 
@@ -394,6 +398,10 @@ def render_dashboard(monitor, stale_threshold, refresh_seconds, now=None):
   <style>
     body {{ font-family: sans-serif; margin: 1.5rem; background: #f5f6f8; color: #222; }}
     h1 {{ margin-bottom: .2rem; }}
+    .topbar {{ display: flex; align-items: baseline; justify-content: space-between;
+               flex-wrap: wrap; gap: .25rem .75rem; }}
+    .topbar h1 {{ margin: 0 0 .2rem 0; }}
+    .version {{ font-size: .95rem; color: #555; white-space: nowrap; }}
     .banner {{ background: #ffe8e6; border: 1px solid #c0392b; color: #7a1c12;
                padding: .7rem 1rem; border-radius: 6px; margin: 1rem 0; }}
     .banner.incomplete {{ background: #fff4d6; border-color: #b8860b; color: #6b4a00; }}
@@ -441,7 +449,10 @@ def render_dashboard(monitor, stale_threshold, refresh_seconds, now=None):
   </style>
 </head>
 <body>
-  <h1>OpenCode Session Monitor</h1>
+  <div class="topbar">
+    <h1>OpenCode Session Monitor</h1>
+    <span class="version">— v{version}</span>
+  </div>
   <p>Read-only, local, loopback-only. Monitoring never writes to a session.</p>
   {banner}
   <div class="count">Awaiting operator: {awaiting}</div>
@@ -568,6 +579,7 @@ def render_dashboard(monitor, stale_threshold, refresh_seconds, now=None):
         banner=banner,
         awaiting=view.awaiting_count,
         teams=teams_html,
+        version=__version__,
     )
 
 

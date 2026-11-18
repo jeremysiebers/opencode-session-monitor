@@ -323,7 +323,8 @@ class TestStatusJsonContract(ScenarioBase):
             self.assertEqual(by_key[key], team_status_of(page, key))
         self.assertEqual(
             set(payload),
-            {"teams", "awaiting_count", "sessions", "banners", "metrics"},
+            # INC027l: additive top-level "version"; all prior keys kept.
+            {"teams", "awaiting_count", "sessions", "banners", "metrics", "version"},
         )
         view = self.monitor.collect_view(STALE, self.now)
         self.assertEqual(
